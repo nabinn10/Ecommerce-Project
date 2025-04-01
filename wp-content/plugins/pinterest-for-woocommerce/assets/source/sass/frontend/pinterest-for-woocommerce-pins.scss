@@ -1,0 +1,33 @@
+.pinterest-for-woocommerce-image-wrapper {
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	z-index: 50;
+	opacity: 0;
+	visibility: hidden;
+
+	@media (hover: none) {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.product:hover > &,
+	.wc-block-grid__product:hover > & {
+		opacity: 1;
+		visibility: visible;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+
+// Twenty Twenty-Four compatibility.
+.wp-block-post,
+.wc-block-product {
+
+	&.product {
+		position: relative;
+	}
+}
